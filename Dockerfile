@@ -7,12 +7,9 @@
 # Pull base image.
 FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
-#COPY ./index.html /usr/share/nginx/html/index.html
-
-# Define mountable directories.
-#VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
-
-# Define working directory.
+RUN echo "THIS IS USA PAGE" > /usr/share/nginx/html/index.html && \
+    mkdir -p /usr/share/nginx/html/us && \
+    echo "THIS IS USA PAGE inside /us folder " > /usr/share/nginx/html/us/index.html
 #WORKDIR /etc/nginx
 
 # Define default command.
