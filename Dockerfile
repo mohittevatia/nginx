@@ -7,12 +7,13 @@
 # Pull base image.
 FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
-RUN echo "THIS IS USA PAGE" > /usr/share/nginx/html/index.html && \
-    mkdir -p /usr/share/nginx/html/us && \
-    echo "THIS IS USA PAGE inside /us folder " > /usr/share/nginx/html/us/index.html
-#WORKDIR /etc/nginx
+RUN echo "HELLO WORLD FROM HOME PAGE" > /usr/share/nginx/html/index.html && \
+    mkdir -p /usr/share/nginx/html/pegaA && mkdir -p /usr/share/nginx/html/pegaB && mkdir -p /usr/share/nginx/html/pegaC && \
+    echo "HELLO WORLD FROM HOME PAGE AAAAA" > /usr/share/nginx/html/pegaA/index.html && \
+    echo "HELLO WORLD FROM HOME PAGE BBBBB" > /usr/share/nginx/html/pegaB/index.html && \
+    echo "HELLO WORLD FROM HOME PAGE CCCCC" > /usr/share/nginx/html/pegaC/index.html
 
-# Define default command.
+
 #CMD ["nginx"]
 
 # Expose ports..
