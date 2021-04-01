@@ -8,10 +8,10 @@
 FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
 RUN echo "CICD DEMO" > /usr/share/nginx/html/index.html && \
-    mkdir -p /usr/share/nginx/html/pegaA && mkdir -p /usr/share/nginx/html/pegaB && mkdir -p /usr/share/nginx/html/ERROR && mkdir -p /usr/share/nginx/html/pegaC && \
-    echo "HELLO WORLD FROM HOME PAGE AAAAA" > /usr/share/nginx/html/pegaA/index.html && \
-    echo "HELLO WORLD FROM HOME PAGE BBBBB" > /usr/share/nginx/html/pegaB/index.html && \
-    echo "HELLO WORLD FROM HOME PAGE CCCCC" > /usr/share/nginx/html/pegaC/index.html && \
+    mkdir -p /usr/share/nginx/html/pageA && mkdir -p /usr/share/nginx/html/pageB && mkdir -p /usr/share/nginx/html/ERROR && mkdir -p /usr/share/nginx/html/pageC && \
+    echo "HELLO WORLD FROM HOME PAGE AAAAAAAAAAAAAAAAAA" > /usr/share/nginx/html/pageA/index.html && \
+    echo "HELLO WORLD FROM HOME PAGE BBBBBBBBBBBBBBBBBB" > /usr/share/nginx/html/pageB/index.html && \
+    echo "HELLO WORLD FROM HOME PAGE CCCCCCCCCCCCCCCCCC" > /usr/share/nginx/html/pageC/index.html && \
     echo "Work In Progress page or Under construction Page" > /usr/share/nginx/html/ERROR/index.html
 
 
